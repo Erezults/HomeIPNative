@@ -1,4 +1,4 @@
-export const APP_VERSION = '1.0.0'
+export const APP_VERSION = '1.1.0'
 
 export type ChangeCategory =
   | 'feature'      // פיצ'ר חדש
@@ -45,6 +45,21 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    version: '1.1.0',
+    date: '2026-03-09',
+    changes: [
+      {
+        category: 'feature',
+        items: [
+          'מבנה ניווט מלא עם Expo Router - אימות, לוח בקרה, הגדרות',
+          'שער אימות אוטומטי - הפניה למסך התחברות או לאפליקציה בהתאם למצב המשתמש',
+          'ניווט טאבים עם הסתרת טאב הגדרות לצופים',
+          'ניווט Stack למסכי הגדרות משנה (רשת, קטגוריות, חדרים, צופים)',
+        ],
+      },
+    ],
+  },
   {
     version: '1.0.0',
     date: '2026-03-09',
