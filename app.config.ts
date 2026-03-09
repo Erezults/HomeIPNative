@@ -2,12 +2,12 @@ import { ExpoConfig, ConfigContext } from 'expo/config'
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: 'HomeIP',
-  slug: 'homeip',
+  name: 'HomeNetIP',
+  slug: 'homenetip',
   version: '1.4.0',
   orientation: 'portrait',
   icon: './assets/images/icon.png',
-  scheme: 'homeip',
+  scheme: 'homenetip',
   userInterfaceStyle: 'automatic',
   ios: {
     supportsTablet: true,

@@ -119,7 +119,7 @@ export default function LoginScreen() {
               resizeMode="contain"
             />
             <Text style={[styles.title, { color: colors.titleGradientStart }]}>
-              HomeIP
+              HomeNetIP
             </Text>
             <Text style={[styles.subtitle, { color: colors.subtitle }]}>
               {t.app.subtitle}

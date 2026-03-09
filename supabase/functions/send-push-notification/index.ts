@@ -25,7 +25,7 @@ serve(async (req) => {
   }
 
   // Build notification message
-  let title = 'HomeIP'
+  let title = 'HomeNetIP'
   let body = ''
   const deviceName = record?.name || old_record?.name || 'Unknown device'
 

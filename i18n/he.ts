@@ -1,5 +1,5 @@
 export const he = {
-  app: { name: 'HomeIP', subtitle: 'ניהול כתובות IP ברשת הביתית' },
+  app: { name: 'HomeNetIP', subtitle: 'ניהול כתובות IP ברשת הביתית' },
   login: {
     title: 'התחברות',
     email: 'אימייל',

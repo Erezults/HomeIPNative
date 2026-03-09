@@ -93,7 +93,7 @@ export function Header({ onVersionPress }: HeaderProps) {
             source={require('@/assets/images/icon.png')}
             style={styles.logo}
           />
-          <Text style={[styles.title, { color: colors.text }]}>HomeIP</Text>
+          <Text style={[styles.title, { color: colors.text }]}>HomeNetIP</Text>
 
           {/* Version Badge */}
           <TouchableOpacity
