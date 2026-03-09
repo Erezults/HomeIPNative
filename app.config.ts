@@ -4,7 +4,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: 'HomeIP',
   slug: 'homeip',
-  version: '1.0.0',
+  version: '1.4.0',
   orientation: 'portrait',
   icon: './assets/images/icon.png',
   scheme: 'homeip',
