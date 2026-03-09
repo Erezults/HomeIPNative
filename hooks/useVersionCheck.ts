@@ -23,7 +23,7 @@ export function useVersionCheck() {
       const { data, error } = await supabase
         .from('app_config')
         .select('value')
-        .eq('key', 'latest_version')
+        .eq('key', 'latest_version_native')
         .single()
 
       if (!error && data) {
