@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   keyboardView: {
+    flex: 1,
     justifyContent: 'flex-end',
   },
   sheet: {
@@ -163,7 +164,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   scroll: {
-    flexGrow: 0,
+    flexGrow: 1,
+    flexShrink: 1,
   },
   scrollContent: {
     padding: 16,
