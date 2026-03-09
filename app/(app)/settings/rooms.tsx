@@ -1,42 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native'
-import { useTheme } from '@/contexts/ThemeContext'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { RoomManager } from '@/components/settings/RoomManager'
 
 export default function RoomsScreen() {
-  const { isDark } = useTheme()
-  const { t } = useLanguage()
-
-  const colors = {
-    background: isDark ? '#111122' : '#f9fafb',
-    text: isDark ? '#ffffff' : '#111827',
-    mutedText: isDark ? '#9ca3af' : '#6b7280',
-  }
-
-  return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Text style={[styles.title, { color: colors.text }]}>
-        {t.settings.rooms}
-      </Text>
-      <Text style={[styles.subtitle, { color: colors.mutedText }]}>
-        Rooms management placeholder
-      </Text>
-    </View>
-  )
+  return <RoomManager />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 14,
-  },
-})
