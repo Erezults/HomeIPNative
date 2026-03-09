@@ -1,4 +1,4 @@
-export const APP_VERSION = '1.3.0'
+export const APP_VERSION = '1.4.0'
 
 export type ChangeCategory =
   | 'feature'      // פיצ'ר חדש
@@ -45,6 +45,21 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    version: '1.4.0',
+    date: '2026-03-09',
+    changes: [
+      {
+        category: 'feature',
+        items: [
+          'תמיכה בהתראות Push באמצעות Expo Notifications',
+          'רישום אוטומטי של טוקן Push בעת התחברות',
+          'Supabase Edge Function לשליחת התראות בעת שינוי מכשירים',
+          'טבלת push_tokens לשמירת טוקנים של משתמשים',
+        ],
+      },
+    ],
+  },
   {
     version: '1.3.0',
     date: '2026-03-09',

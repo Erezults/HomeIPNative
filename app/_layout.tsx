@@ -3,9 +3,15 @@ import { useEffect } from 'react'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AuthProvider, useAuth } from '@/contexts/AuthContext'
+import { usePushNotifications } from '@/hooks/usePushNotifications'
 import '../global.css'
 
 export { ErrorBoundary } from 'expo-router'
+
+function NotificationRegistrar() {
+  usePushNotifications()
+  return null
+}
 
 function AuthGate() {
   const { user, viewerSession, isLoading } = useAuth()
@@ -35,6 +41,7 @@ export default function RootLayout() {
     <ThemeProvider>
       <LanguageProvider>
         <AuthProvider>
+          <NotificationRegistrar />
           <AuthGate />
         </AuthProvider>
       </LanguageProvider>
