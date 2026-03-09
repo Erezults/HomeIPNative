@@ -1,5 +1,8 @@
 import { Slot, useRouter, useSegments } from 'expo-router'
 import { useEffect } from 'react'
+import { LogBox } from 'react-native'
+
+LogBox.ignoreAllLogs()
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AuthProvider, useAuth } from '@/contexts/AuthContext'
