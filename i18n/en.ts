@@ -70,7 +70,7 @@ export const en = {
     dark: 'Dark',
     light: 'Light',
     language: 'Language',
-    hebrew: 'עברית',
+    hebrew: 'Hebrew',
     english: 'English',
     subnet: 'Subnet',
     gateway: 'Default Gateway',

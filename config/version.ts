@@ -1,26 +1,26 @@
 export const APP_VERSION = '1.4.0'
 
 export type ChangeCategory =
-  | 'feature'      // פיצ'ר חדש
-  | 'bugfix'       // תיקון באג
-  | 'improvement'  // שיפור
-  | 'ui'           // שינוי ממשק
-  | 'performance'  // ביצועים
-  | 'security'     // אבטחה
-  | 'a11y'         // נגישות
-  | 'deprecated'   // הוצא משימוש
-  | 'docs'         // תיעוד
+  | 'feature'      // New Feature
+  | 'bugfix'       // Bug Fix
+  | 'improvement'  // Improvement
+  | 'ui'           // UI Change
+  | 'performance'  // Performance
+  | 'security'     // Security
+  | 'a11y'         // Accessibility
+  | 'deprecated'   // Deprecated
+  | 'docs'         // Documentation
 
 export const CATEGORY_LABELS: Record<ChangeCategory, string> = {
-  feature: 'פיצ\'ר חדש',
-  bugfix: 'תיקון באג',
-  improvement: 'שיפור',
-  ui: 'שינוי ממשק',
-  performance: 'ביצועים',
-  security: 'אבטחה',
-  a11y: 'נגישות',
-  deprecated: 'הוצא משימוש',
-  docs: 'תיעוד',
+  feature: 'New Feature',
+  bugfix: 'Bug Fix',
+  improvement: 'Improvement',
+  ui: 'UI Change',
+  performance: 'Performance',
+  security: 'Security',
+  a11y: 'Accessibility',
+  deprecated: 'Deprecated',
+  docs: 'Documentation',
 }
 
 export const CATEGORY_COLORS: Record<ChangeCategory, string> = {
@@ -52,10 +52,10 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'תמיכה בהתראות Push באמצעות Expo Notifications',
-          'רישום אוטומטי של טוקן Push בעת התחברות',
-          'Supabase Edge Function לשליחת התראות בעת שינוי מכשירים',
-          'טבלת push_tokens לשמירת טוקנים של משתמשים',
+          'Push notification support using Expo Notifications',
+          'Automatic Push token registration on login',
+          'Supabase Edge Function for sending notifications on device changes',
+          'push_tokens table for storing user tokens',
         ],
       },
     ],
@@ -67,26 +67,26 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'מסך לוח בקרה מלא עם תצוגת מכשירים, סטטיסטיקות וסינון',
-          'חיפוש מכשירים לפי שם, IP, MAC או תיאור',
-          'סינון לפי קטגוריה וחדר',
-          'קיבוץ מכשירים לפי קטגוריות ו/או חדרים עם קיפול/פתיחה',
-          'חלונית צפייה בפרטי מכשיר עם תמונה, סטטוס ומידע מלא',
-          'טופס הוספה/עריכת מכשיר עם תיקוף IP, הצעת IP פנוי, העלאת תמונה',
-          'לחיצה ארוכה על מכשיר לעריכה/מחיקה מהירה',
-          'כפתור FAB להוספת מכשיר חדש',
-          'משיכה לרענון (Pull to Refresh)',
+          'Full dashboard screen with device display, statistics and filtering',
+          'Device search by name, IP, MAC or description',
+          'Filtering by category and room',
+          'Device grouping by categories and/or rooms with collapse/expand',
+          'Device detail view panel with image, status and full information',
+          'Add/edit device form with IP validation, available IP suggestion, image upload',
+          'Long press on device for quick edit/delete',
+          'FAB button to add a new device',
+          'Pull to Refresh',
         ],
       },
       {
         category: 'ui',
         items: [
-          'כרטיסיות סטטיסטיקה צבעוניות: סה"כ מכשירים, פעילים, כתובות פנויות',
-          'כותרות קטגוריה צבעוניות עם תמונה, מספר מכשירים וטווח IP',
-          'כותרות חדרים עם אייקון, צבע ומספר מכשירים',
-          'שורת מכשיר עם תמונה, סטטוס (ירוק/אפור), שם וכתובת IP',
-          'תמיכה מלאה במצב כהה ובהיר',
-          'תמיכה בכיוון RTL',
+          'Colorful statistics cards: total devices, active, available addresses',
+          'Colorful category headers with image, device count and IP range',
+          'Room headers with icon, color and device count',
+          'Device row with image, status (green/gray), name and IP address',
+          'Full support for dark and light mode',
+          'RTL direction support',
         ],
       },
     ],
@@ -98,18 +98,18 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'מסך התחברות מלא עם תמיכה בבעלים (אימייל/סיסמה) וצופים (קוד צפייה)',
-          'מעבר חלק בין מצב בעלים למצב צופה במסך ההתחברות',
-          'תצוגת שגיאות מעוצבת בטופס ההתחברות',
+          'Full login screen with support for owners (email/password) and viewers (viewer code)',
+          'Smooth transition between owner mode and viewer mode on the login screen',
+          'Styled error display in the login form',
         ],
       },
       {
         category: 'ui',
         items: [
-          'עיצוב מסך התחברות עם לוגו, כרטיס מרכזי ורקע דקורטיבי',
-          'תמיכה במצב כהה/בהיר במסך ההתחברות',
-          'KeyboardAvoidingView לטיפול במקלדת ב-iOS',
-          'Footer עם קרדיט למפתח במסך ההתחברות',
+          'Login screen design with logo, centered card and decorative background',
+          'Dark/light mode support on the login screen',
+          'KeyboardAvoidingView for keyboard handling on iOS',
+          'Footer with developer credit on the login screen',
         ],
       },
     ],
@@ -121,10 +121,10 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'מבנה ניווט מלא עם Expo Router - אימות, לוח בקרה, הגדרות',
-          'שער אימות אוטומטי - הפניה למסך התחברות או לאפליקציה בהתאם למצב המשתמש',
-          'ניווט טאבים עם הסתרת טאב הגדרות לצופים',
-          'ניווט Stack למסכי הגדרות משנה (רשת, קטגוריות, חדרים, צופים)',
+          'Full navigation structure with Expo Router - auth, dashboard, settings',
+          'Automatic auth gate - redirect to login or app based on user state',
+          'Tab navigation with hidden settings tab for viewers',
+          'Stack navigation for settings sub-screens (network, categories, rooms, viewers)',
         ],
       },
     ],
@@ -136,7 +136,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'השקת אפליקציית React Native - גרסה נייטיבית לאייפון ואנדרואיד',
+          'React Native app launch - native version for iPhone and Android',
         ],
       },
     ],
@@ -148,23 +148,23 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'security',
         items: [
-          'אכיפת הרשאות עריכה בצד השרת - צופים עם הרשאת עריכה מנותבים דרך RPC מאובטח',
-          'תיקוף session token בצד השרת לפני כל פעולת כתיבה של צופה',
+          'Server-side edit permission enforcement - viewers with edit permission routed through secure RPC',
+          'Server-side session token validation before any viewer write operation',
         ],
       },
       {
         category: 'bugfix',
         items: [
-          'תיקון דליפת זיכרון בהעלאת תמונת קטגוריה (URL.createObjectURL)',
-          'הצגת אזהרה כאשר העלאת תמונת קטגוריה נכשלת',
-          'הסרת קריאת storage.remove מיותרת לפני upsert',
+          'Fixed memory leak in category image upload (URL.createObjectURL)',
+          'Show warning when category image upload fails',
+          'Removed unnecessary storage.remove call before upsert',
         ],
       },
       {
         category: 'improvement',
         items: [
-          'שינוי שם prop מ-isOwner ל-canEdit בחלונית צפייה במכשיר',
-          'הוספת תיאור לשדה הרשאת עריכה בהפקת קוד צפייה',
+          'Renamed prop from isOwner to canEdit in device view panel',
+          'Added description to edit permission field in viewer code generation',
         ],
       },
     ],
@@ -176,7 +176,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'כפתור שינוי שפה ב-header מציג דגל (🇺🇸/🇮🇱) במקום אייקון גנרי',
+          'Language toggle button in header shows flag (US/IL) instead of generic icon',
         ],
       },
     ],
@@ -188,16 +188,16 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'הרשאת עריכה לצופים - אפשרות לאפשר לצופה לערוך נתונים במערכת',
-          'כפתורי מראה ושפה בכותרת למשתמשים המתחברים עם קוד צפייה',
-          'כפתורי בחר הכל / בטל הכל בהגדרת קטגוריות וחדרים בקוד צפייה',
-          'אפשרות לעריכת תווית קוד צפייה קיים',
+          'Edit permission for viewers - option to allow viewers to edit data in the system',
+          'Appearance and language buttons in header for users connecting with viewer code',
+          'Select all / Deselect all buttons for category and room settings in viewer code',
+          'Option to edit label of existing viewer code',
         ],
       },
       {
         category: 'bugfix',
         items: [
-          'תיקון: צופה לא רואה מכשירים ללא קטגוריה/חדר כשנבחרו כל הקטגוריות/חדרים',
+          'Fix: viewer cannot see devices without category/room when all categories/rooms are selected',
         ],
       },
     ],
@@ -209,10 +209,10 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'הוספת אפשרות להגדיר תמונה לקטגוריה',
-          'תמונת קטגוריה מוצגת ליד שם הקטגוריה בלוח הבקרה (מחליפה את האייקון)',
-          'העלאת תמונה מהמכשיר עם דחיסה אוטומטית ל-WebP',
-          'אפשרות להסרת תמונת קטגוריה קיימת',
+          'Added option to set an image for a category',
+          'Category image displayed next to category name in dashboard (replaces icon)',
+          'Image upload from device with automatic WebP compression',
+          'Option to remove existing category image',
         ],
       },
     ],
@@ -224,7 +224,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'שורת כותרת הקטגוריה נצבעת במלואה בצבע הקטגוריה שהוגדר על ידי המשתמש',
+          'Category header row fully colored with the user-defined category color',
         ],
       },
     ],
@@ -236,9 +236,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'הוספת Open Graph meta tags לשיתוף יפה בוואטסאפ, טלגרם, פייסבוק ועוד',
-          'תמונת OG מעוצבת (1200x630) עם לוגו ושם האפליקציה',
-          'תמיכה ב-Twitter Card (summary_large_image)',
+          'Added Open Graph meta tags for attractive sharing on WhatsApp, Telegram, Facebook and more',
+          'Styled OG image (1200x630) with logo and app name',
+          'Twitter Card support (summary_large_image)',
         ],
       },
     ],
@@ -250,9 +250,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'רגנרציה מלאה של כל אייקוני PWA ומניפסט ללא פינות מעוגלות מובנות',
-          'הוספת אייקון 180x180 למניפסט עבור iOS',
-          'כל האייקונים עכשיו RGB טהור ללא שקיפות',
+          'Full regeneration of all PWA icons and manifest without built-in rounded corners',
+          'Added 180x180 icon to manifest for iOS',
+          'All icons are now pure RGB without transparency',
         ],
       },
     ],
@@ -264,8 +264,8 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'performance',
         items: [
-          'שיפור ביצועי חיפוש - סינון client-side ללא refetch מהשרת בכל הקשה',
-          'שדה החיפוש שומר על פוקוס ולא גורם לטעינה מחדש של המסך',
+          'Search performance improvement - client-side filtering without server refetch on each keystroke',
+          'Search field maintains focus and does not cause screen reload',
         ],
       },
     ],
@@ -277,9 +277,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'תיקון אייקון PWA באייפון - הסרת מסגרת מעוגלת מובנית, גרפיקה ממלאת את כל השטח',
-          'הוספת sizes="180x180" לתג apple-touch-icon',
-          'עדכון Service Worker cache לאילוץ רענון',
+          'Fixed PWA icon on iPhone - removed built-in rounded frame, graphic fills entire area',
+          'Added sizes="180x180" to apple-touch-icon tag',
+          'Updated Service Worker cache to force refresh',
         ],
       },
     ],
@@ -291,7 +291,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'תיקון אייקון PWA באייפון - החלפת apple-touch-icon לאייקון עם רקע כהה מלא',
+          'Fixed PWA icon on iPhone - replaced apple-touch-icon with full dark background icon',
         ],
       },
     ],
@@ -303,10 +303,10 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'העלאת תמונה למכשיר מתוך הגלריה או מקובץ',
-          'כיווץ אוטומטי של תמונות ל-256x256 בפורמט WebP לחיסכון בנפח',
-          'תצוגה מקדימה של תמונה בטופס עריכת/הוספת מכשיר',
-          'אפשרות להסרת תמונה קיימת',
+          'Device image upload from gallery or file',
+          'Automatic image compression to 256x256 in WebP format to save storage',
+          'Image preview in device add/edit form',
+          'Option to remove existing image',
         ],
       },
     ],
@@ -318,9 +318,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'improvement',
         items: [
-          'איתור והגדרת תמונות מוצר לכל 25 המכשירים שחסרו תמונה',
-          'תיקון תמונות שגויות (HomePod Salon, MacBook M1 Pro הציגו תמונת Apple TV)',
-          'העלאת 18 תמונות מוצר חדשות ל-Supabase Storage',
+          'Located and set product images for all 25 devices that were missing an image',
+          'Fixed incorrect images (HomePod Salon, MacBook M1 Pro were showing Apple TV image)',
+          'Uploaded 18 new product images to Supabase Storage',
         ],
       },
     ],
@@ -332,10 +332,10 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'התאמת לוח הבקרה לנייד - כרטיסיות סטטיסטיקה קומפקטיות בשורה אחת',
-          'שדות חיפוש וסינון מותאמים לרוחב מסך נייד',
-          'כפתורי קיבוץ הועברו לשורת הכותרת לחיסכון במקום',
-          'ריווח מופחת בתצוגת נייד',
+          'Mobile-adapted dashboard - compact statistics cards in a single row',
+          'Search and filter fields adapted to mobile screen width',
+          'Grouping buttons moved to header row to save space',
+          'Reduced spacing in mobile view',
         ],
       },
     ],
@@ -347,7 +347,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'תיקון אייקון PWA קטן באייפון - הפרדת אייקוני maskable מ-any במניפסט',
+          'Fixed small PWA icon on iPhone - separated maskable icons from any in manifest',
         ],
       },
     ],
@@ -359,14 +359,14 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'תיקון תצוגת קטגוריה וחדר בחלונית עריכת מכשיר (הוצג מזהה במקום שם)',
-          'תיקון תצוגת שדות בחירה בכל האפליקציה (סינון, הגדרות)',
+          'Fixed category and room display in device edit panel (showed ID instead of name)',
+          'Fixed select field display across the entire app (filtering, settings)',
         ],
       },
       {
         category: 'improvement',
         items: [
-          'אישור לפני הקצאת כתובת IP חדשה כאשר קיימת כתובת',
+          'Confirmation before assigning a new IP address when one already exists',
         ],
       },
     ],
@@ -378,8 +378,8 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'improvement',
         items: [
-          'כפתור הגרסה מציג את הגרסה החדשה כאשר קיים עדכון',
-          'לחיצה על כפתור הגרסה טוענת אוטומטית את הגרסה החדשה',
+          'Version button shows the new version when an update is available',
+          'Clicking the version button automatically loads the new version',
         ],
       },
     ],
@@ -391,8 +391,8 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'הסרת כפתור ערכת נושא מה-header (קיים במסך ההגדרות)',
-          'תיקון כיוון מתג ערכת נושא במסך ההגדרות למצב RTL',
+          'Removed theme button from header (exists in settings screen)',
+          'Fixed theme toggle direction in settings screen for RTL mode',
         ],
       },
     ],
@@ -404,14 +404,14 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'מתגי קיבוץ עצמאיים - אפשרות לכבות/להדליק קיבוץ לפי קטגוריות וחדרים בנפרד',
-          'תצוגת רשימה שטוחה כאשר שני הקיבוצים כבויים',
+          'Independent grouping toggles - option to enable/disable grouping by categories and rooms separately',
+          'Flat list view when both groupings are disabled',
         ],
       },
       {
         category: 'ui',
         items: [
-          'שני כפתורי מתג עצמאיים במקום מתג בחירה יחיד',
+          'Two independent toggle buttons instead of a single selection toggle',
         ],
       },
     ],
@@ -423,9 +423,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'תמיכה בשמות דו-לשוניים (עברית + אנגלית) לקטגוריות וחדרים',
-          'שדות שם בעברית ובאנגלית בהגדרות קטגוריות וחדרים',
-          'הצגת שם בשפה המתאימה בכל הרכיבים',
+          'Bilingual name support (Hebrew + English) for categories and rooms',
+          'Hebrew and English name fields in category and room settings',
+          'Display name in the appropriate language across all components',
         ],
       },
     ],
@@ -437,16 +437,16 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'מתג קיבוץ לפי קטגוריות או חדרים במסך הראשי',
-          'קיפול חדרים בתוך קטגוריות (וקטגוריות בתוך חדרים)',
-          'הצגת טווח כתובות IP בכותרת כל שדה מקופל',
+          'Grouping toggle by categories or rooms on the main screen',
+          'Room collapsing within categories (and categories within rooms)',
+          'IP address range displayed in each collapsed field header',
         ],
       },
       {
         category: 'ui',
         items: [
-          'כל השדות מקופלים כברירת מחדל לתצוגה נקייה יותר',
-          'העדפת קיבוץ נשמרת בין סשנים',
+          'All fields collapsed by default for a cleaner view',
+          'Grouping preference saved between sessions',
         ],
       },
     ],
@@ -458,8 +458,8 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'תיקון שגיאת "כתובת IP מחוץ לטווח הרשת" כאשר הסאבנט מוגדר ללא CIDR mask',
-          'ברירת מחדל /24 כאשר לא מוגדר mask בכל פונקציות הרשת',
+          'Fixed "IP address out of network range" error when subnet is configured without CIDR mask',
+          'Default /24 when no mask is defined in all network functions',
         ],
       },
     ],
@@ -471,9 +471,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'תמיכה ב-PWA - התקנת האפליקציה כאפליקציה עצמאית בכל פלטפורמה',
-          'אייקון האפליקציה מוגדר לכל הפלטפורמות: iOS, Android, Mac, Windows',
-          'Service Worker לתמיכה בסיסית במצב אופליין',
+          'PWA support - install the app as a standalone application on any platform',
+          'App icon configured for all platforms: iOS, Android, Mac, Windows',
+          'Service Worker for basic offline support',
         ],
       },
     ],
@@ -485,11 +485,11 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'עיצוב מחדש של רשימת המכשירים - שורות מינימליסטיות במקום כרטיסיות',
-          'חלונית צפייה בפרטי מכשיר בלחיצה',
-          'צבעים ייחודיים לחדרים עם בוחר צבעים בהגדרות',
-          'הרחבת פלטת הצבעים ל-30 לקטגוריות וחדרים',
-          'כותרות חדרים עם נקודת צבע ייחודית ברשימת המכשירים',
+          'Redesigned device list - minimalist rows instead of cards',
+          'Device detail view panel on click',
+          'Unique room colors with color picker in settings',
+          'Expanded color palette to 30 for categories and rooms',
+          'Room headers with unique color dot in device list',
         ],
       },
     ],
@@ -501,12 +501,12 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'ייבוא 142 התקנים מקובץ Excel לתוך מסד הנתונים',
-          'הוספת 5 קטגוריות: תשתית רשת, מכשירי בית, Shelly, Reolink, Apple',
-          'הוספת 21 חדרים לפי מיקומי ההתקנים',
-          'שדות חדשים: תמונת מוצר, דגם, מספר סידורי',
-          'תמונות מוצר מאוחסנות ב-Supabase Storage (ללא צורך באינטרנט)',
-          'תמונת מוצר מוצגת בכרטיס ההתקן',
+          'Imported 142 devices from Excel file into the database',
+          'Added 5 categories: Network Infrastructure, Home Devices, Shelly, Reolink, Apple',
+          'Added 21 rooms based on device locations',
+          'New fields: product image, model, serial number',
+          'Product images stored in Supabase Storage (no internet required)',
+          'Product image displayed on device card',
         ],
       },
     ],
@@ -518,9 +518,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'יומן שינויים: רשימה שטוחה עם תגית סוג ליד כל שינוי',
-          'מקרא צבעים קבוע בראש חלונית יומן השינויים',
-          'הגדלת הלוגו בחלונית הקרדיט',
+          'Changelog: flat list with type tag next to each change',
+          'Fixed color legend at the top of the changelog panel',
+          'Enlarged logo in the credit panel',
         ],
       },
     ],
@@ -532,8 +532,8 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'עיצוב מחדש של חלונית הקרדיט למראה מקצועי',
-          'תיקון צבעי הלוגו - הלוגו מוצג בצבעים המקוריים',
+          'Redesigned credit panel for a professional look',
+          'Fixed logo colors - logo displayed in original colors',
         ],
       },
     ],
@@ -545,13 +545,13 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'תיקון שגיאת רקורסיה אינסופית ב-RLS שמנעה שמירת הגדרות רשת',
+          'Fixed infinite recursion error in RLS that prevented saving network settings',
         ],
       },
       {
         category: 'security',
         items: [
-          'שיפור מדיניות RLS עם פונקציית SECURITY DEFINER למניעת רקורסיה',
+          'Improved RLS policy with SECURITY DEFINER function to prevent recursion',
         ],
       },
     ],
@@ -563,9 +563,9 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'בדיקת גרסה אוטומטית מול מסד הנתונים',
-          'התראה למשתמש כאשר קיימת גרסה חדשה',
-          'כפתור עדכון מיידי לגרסה האחרונה',
+          'Automatic version check against the database',
+          'User notification when a new version is available',
+          'Instant update button to the latest version',
         ],
       },
     ],
@@ -577,7 +577,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'ui',
         items: [
-          'סימן צבעוני ליד כל שורת שינוי ביומן השינויים',
+          'Colored indicator next to each changelog entry',
         ],
       },
     ],
@@ -589,7 +589,7 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'improvement',
         items: [
-          'הצגת הודעת שגיאה מפורטת בשדות הגדרות רשת',
+          'Detailed error message display in network settings fields',
         ],
       },
     ],
@@ -601,8 +601,8 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'bugfix',
         items: [
-          'שדה סאבנט מקבל כתובת IP רגילה (ללא CIDR)',
-          'ברירת מחדל לסאבנט שונתה ל-192.168.1.1',
+          'Subnet field accepts regular IP address (without CIDR)',
+          'Default subnet changed to 192.168.1.1',
         ],
       },
     ],
@@ -614,21 +614,21 @@ export const changelog: ChangelogEntry[] = [
       {
         category: 'feature',
         items: [
-          'מסך התחברות עם תמיכה בבעלים וצופים',
-          'לוח בקרה עם ניהול מכשירים',
-          'הגדרות רשת עם שמירה אוטומטית',
-          'ניהול קטגוריות וחדרים',
-          'ניהול קודי צפייה עם הרשאות',
-          'זיהוי כפילויות IP',
-          'הצעת IP פנוי',
+          'Login screen with support for owners and viewers',
+          'Dashboard with device management',
+          'Network settings with auto-save',
+          'Category and room management',
+          'Viewer code management with permissions',
+          'IP duplicate detection',
+          'Available IP suggestion',
         ],
       },
       {
         category: 'ui',
         items: [
-          'תמיכה בעברית ואנגלית',
-          'מצב כהה ובהיר',
-          'תג גרסה עם יומן שינויים',
+          'Hebrew and English support',
+          'Dark and light mode',
+          'Version tag with changelog',
         ],
       },
     ],
