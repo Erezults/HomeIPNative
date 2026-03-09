@@ -12,9 +12,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ios: {
     supportsTablet: true,
     bundleIdentifier: 'com.erezults.homeip',
+    buildNumber: '1',
     infoPlist: {
       NSCameraUsageDescription: 'Used to take photos of network devices',
       NSPhotoLibraryUsageDescription: 'Used to select photos for network devices',
+      ITSAppUsesNonExemptEncryption: false,
     },
   },
   plugins: [
