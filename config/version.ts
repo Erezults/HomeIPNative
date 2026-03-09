@@ -1,4 +1,4 @@
-export const APP_VERSION = '1.1.0'
+export const APP_VERSION = '1.2.0'
 
 export type ChangeCategory =
   | 'feature'      // פיצ'ר חדש
@@ -45,6 +45,29 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    version: '1.2.0',
+    date: '2026-03-09',
+    changes: [
+      {
+        category: 'feature',
+        items: [
+          'מסך התחברות מלא עם תמיכה בבעלים (אימייל/סיסמה) וצופים (קוד צפייה)',
+          'מעבר חלק בין מצב בעלים למצב צופה במסך ההתחברות',
+          'תצוגת שגיאות מעוצבת בטופס ההתחברות',
+        ],
+      },
+      {
+        category: 'ui',
+        items: [
+          'עיצוב מסך התחברות עם לוגו, כרטיס מרכזי ורקע דקורטיבי',
+          'תמיכה במצב כהה/בהיר במסך ההתחברות',
+          'KeyboardAvoidingView לטיפול במקלדת ב-iOS',
+          'Footer עם קרדיט למפתח במסך ההתחברות',
+        ],
+      },
+    ],
+  },
   {
     version: '1.1.0',
     date: '2026-03-09',
