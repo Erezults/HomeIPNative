@@ -48,12 +48,14 @@ export function Modal({ visible, onClose, title, children, contentStyle }: Modal
       animationType="slide"
       onRequestClose={onClose}
     >
-      <Pressable style={styles.backdrop} onPress={onClose}>
+      <View style={styles.backdrop}>
+        <Pressable style={styles.backdropTouch} onPress={onClose} />
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}
           style={styles.keyboardView}
+          pointerEvents="box-none"
         >
-          <Pressable
+          <View
             style={[
               styles.sheet,
               {
@@ -61,7 +63,6 @@ export function Modal({ visible, onClose, title, children, contentStyle }: Modal
                 paddingBottom: insets.bottom || 16,
               },
             ]}
-            onPress={() => {}} // Prevent backdrop dismiss when tapping content
           >
             {/* Handle bar */}
             <View style={styles.handleContainer}>
@@ -113,9 +114,9 @@ export function Modal({ visible, onClose, title, children, contentStyle }: Modal
             >
               {children}
             </ScrollView>
-          </Pressable>
+          </View>
         </KeyboardAvoidingView>
-      </Pressable>
+      </View>
     </RNModal>
   )
 }
@@ -124,10 +125,15 @@ const styles = StyleSheet.create({
   backdrop: {
     flex: 1,
     backgroundColor: COLORS.backdrop,
-    justifyContent: 'flex-end',
+  },
+  backdropTouch: {
+    flex: 1,
   },
   keyboardView: {
-    flex: 1,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
     justifyContent: 'flex-end',
   },
   sheet: {
